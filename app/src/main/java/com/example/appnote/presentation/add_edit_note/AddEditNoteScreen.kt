@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Done
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
@@ -79,7 +80,7 @@ fun AddEditNoteScreen(
                 },
                // backgroundColor = MaterialTheme.colorScheme.primary
             ) {
-                Icon(imageVector = Icons.Default.Star, contentDescription = "Save note")
+                Icon(imageVector = Icons.Default.Done, contentDescription = "Save note")
             }
         },
         //scaffoldState = scaffoldState
