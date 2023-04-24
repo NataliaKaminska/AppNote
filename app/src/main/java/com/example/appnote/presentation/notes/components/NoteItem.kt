@@ -22,6 +22,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.ColorUtils
 import com.example.appnote.domain.model.Note
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 
 @Composable
@@ -79,6 +82,14 @@ fun NoteItem(
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 10,
+                overflow = TextOverflow.Ellipsis
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+            Text(
+                text = SimpleDateFormat("dd MMMM yyyy HH:mm", Locale.ENGLISH).format(Date(note.timestamp)),
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurface ,
+                maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
         }
