@@ -10,6 +10,7 @@ import com.example.appnote.domain.use_case.DeleteNote
 import com.example.appnote.domain.use_case.GetNote
 import com.example.appnote.domain.use_case.GetNotes
 import com.example.appnote.domain.use_case.NoteUseCases
+import com.example.appnote.domain.use_case.SearchNotesByTitle
 
 import dagger.Module
 import dagger.Provides
@@ -44,7 +45,8 @@ object AppModule {
             getNotes = GetNotes(repository),
             deleteNote = DeleteNote(repository),
             addNote = AddNote(repository),
-            getNote = GetNote(repository)
+            getNote = GetNote(repository),
+            searchNotesByTitle = SearchNotesByTitle(repository)
         )
     }
 }

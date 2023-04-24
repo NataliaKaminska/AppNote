@@ -12,4 +12,5 @@ interface NoteRepo {
     suspend fun insertNote(note: Note)
 
     suspend fun deleteNote(note: Note)
+    fun searchNotesByTitle(query: String): Flow<List<Note>>
 }
